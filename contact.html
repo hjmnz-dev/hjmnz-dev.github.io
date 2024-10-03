@@ -9,30 +9,37 @@
 
     <link rel="icon" href="img/icon-js.png">
 
+
     <!--Archivos css-->
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <link id="theme" rel="stylesheet" type="text/css" href="css/green.css">
-    
-    <!--jQuery-->
+
+    <!--jQuery--> 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <!--Slider-->
+     <!-- jQuery UI-->
+     <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.min.css">
+     <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.structure.min.css">
+     <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.theme.min.css">
+     <script type="text/javascript" src="js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+     <!-- jQuery autofillcampoff plugin-->
 
-    <!--Moment-->
+    <script src="https://cdn.jsdelivr.net/npm/disableautofill/src/jquery.disableAutoFill.min.js"></script>
+     
+     <!--jQuery fom-validator-->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+     
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/es.min.js"></script>
  
     <!--Archivos javascript-->
     <script type="text/javascript" src="js/main.js"></script>
     
 
+    
 </head>
 <body>
 
@@ -68,23 +75,44 @@
             </nav>
         </header>
 
-        <!--Slider-->
-
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="img/hojas.jpg" title="Hojas"></div>
-                <div><img src="img/rojo.jpg" title="Rojo"></div>
-                <div><img src="img/cielo.jpg" title="Cielo"></div>
-              </div>
-        </div>
+        
 
         <!--Contenido-->
 
         <section id="content">
 
-            <div id="posts">
+            <div id="box">
                 
-                <!--Cargar posts desde json-->
+            <!--Cargar formulario-->
+
+            <h2>Contacto</h2>
+
+            <form id="form_contact" action="" method="POST">
+
+                <label for="name">Nombre</label><br>
+                <input type="text" name="name" data-validation="alphanumeric"><br>
+
+                <label for="surname">Apellidos</label><br>
+                <input type="text" name="surname" data-validation="alphanumeric"><br>
+
+                <label for="email">Email</label><br>
+                <input type="email" name="email" data-validation="email"><br>
+
+                <label for="sex">Sexo</label><br>
+                <select name="sex" data-validation="required">
+                    <option value="men">Hombre</option>
+                    <option value="woman">Mujer</option>
+                </select><br>
+
+                <label for="born_date">Fecha de nacimiento</label><br>
+                <input type="text" name="born_date" data-validation="date" data-validation-format="dd-mm-yyyy" autocomplete="off" ><br>
+
+                <label for="age">Edad</label><br>
+                <input type="number" name="age" data-validation="number"><br>
+
+                <input type="submit" value="Enviar">
+
+            </form>
                 
             </div>
 
@@ -129,21 +157,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
